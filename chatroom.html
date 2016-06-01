@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Report - LeanCloud Tool for Sioeye</title>
+  <meta name="description" content="help page">
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="user-scalable=no">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- -->
+  <div class="item">
+    <div id="div-condition">
+      <form>
+      <input type="radio" name="create" value="username" checked="checked">Username
+      <input type="radio" name="create" value="sioeyeid">SioeyeId
+      <label>创建者：</label>
+      <input autofocus id="input-c" type="text" value='user00001@may.event'>
+      <div id="search-btn" class="btn">查询</div>
+      <div id="save-btn" class="btn">保存选择的房间号到cookie</div>
+      <div id="clear-btn" class="btn">清空结果</div>
+      </form>
+    </div>
+    <div id="div-room" class="div-room">
+      <form>
+      </form>
+    </div>
+  </div>
+  
+   <!-- 引入 LeanCloud 存储 SDK -->
+  <script src="./lib/leancloud-jssdk.js/dist/av-core-mini.js"></script> 
+  <!-- 引入 LeanCloud 实时通信 SDK -->
+  <script src="./lib/leancloud-realtime/dist/AV.realtime.js"></script>
+  <!-- 引入 JQuery -->
+  <script src="./lib/jquery/dist/jquery.min.js"></script>
+  <script src="./lib/jquery.cookie/jquery.cookie.js"></script>
+  <!-- 引入 underscore -->
+  <script src="./lib/underscore/underscore-min.js"></script>
+  <!-- Chat部分逻辑文件 -->
+  <script src="./tool.js"></script>
+  <script src="./query.js"></script>
+  
+</body>
+
+</html>

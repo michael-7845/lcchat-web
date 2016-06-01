@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>LeanCloud Tool for Sioeye</title>
+  <meta name="description" content="chat tool page">
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="user-scalable=no">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>欢迎使用 LeanCloud Tool for Sioeye</h1>
+  
+  <!-- -->
+  <div class="item">
+    <p><a target="_blank" href="./lctoolhelper.html">工具使用方法</a></p>
+    <p></p>
+  </div>
+  
+  <div id='app' class="item">
+    <label>app id：</label>
+    <input id="input-appid" type="text">
+    <label>app key：</label>
+    <input id="input-appkey" type="text">
+    <div id="switch-btn" class="btn">切换环境</div>
+    <div id="ut03-btn" class="btn">UT03(default)</div>
+    <div id="other-btn" class="btn">Other</div>
+  </div>
+  
+  <div id='mode-single' class="item">
+    <label>房间号：</label>
+    <a target="_blank" href="./chatroom.html">查询房间信息</a>
+    <div id="get-btn" class="btn">从cookie获取房间号</div>
+    <input autofocus id="input-roomid" type="text"><br>
+    <form>
+    <label>您的昵称：</label>
+    <input type="radio" name="user" value="username" checked="checked">Username
+    <input type="radio" name="user" value="sioeyeid">SioeyeId
+    <div id="user-btn" class="btn">转换为user's oid</div>
+    <input id="input-name" class="input-name" type="text"><br>
+    </form>
+    <div id="open-btn" class="btn">连接服务器</div>
+    <div id="join-btn" class="btn">加入</div>
+    <div id="exit-btn" class="btn">退出</div><br>
+  </div>
+  
+  <div class="item">
+    <div id="print-wall" class="print-wall"></div>
+  </div>
+  
+  <div class="item">
+    <label>输入信息：</label>
+    <input id="input-send" class="input-send" type="text" value="sample">
+    <label>重复次数：</label>
+    <input id="input2-number" class="input2" type="text" value=1>
+    <label>间隔时间(毫秒)：</label>
+    <input id="input2-interval" class="input2" type="text" value=1000>
+    <div id="send-btn" class="btn">发送</div>
+    <div id="clearprint-btn" class="btn">清空输出</div>
+  </div>
+  
+  <div class="item">
+    <textarea id="report-area" class="report-area" rows="50" cols="80"></textarea><br>
+    <div id="report-btn" class="btn">当前统计情况</div>
+    <div id="clearreport-btn" class="btn">清空统计情况</div>
+  </div>
+  
+  <!-- 引入 LeanCloud 存储 SDK -->
+  <script src="./lib/leancloud-jssdk.js/dist/av-core-mini.js"></script> 
+  <!-- 引入 LeanCloud 实时通信 SDK -->
+  <script src="./lib/leancloud-realtime/dist/AV.realtime.js"></script>
+  <!-- 引入 JQuery -->
+  <script src="./lib/jquery/dist/jquery.min.js"></script>
+  <script src="./lib/jquery.cookie/jquery.cookie.js"></script>
+  <!-- 引入 underscore -->
+  <script src="./lib/underscore/underscore-min.js"></script>
+  <!-- Chat部分逻辑文件 -->
+  <script src="./tool.js"></script>
+  <script src="./client.js"></script>
+  <script src="./chat.js"></script>
+  
+</body>
+
+</html>
